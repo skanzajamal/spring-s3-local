@@ -82,6 +82,7 @@ public class s3Playground {
     private void receiveAndWaitForMessages(AmazonSQSAsync sqsClient) {
 
         var queueUrl   = sqsClient.getQueueUrl(QUEUE_NAME);
+//        var request    = new ReceiveMessageRequest("http://localhost:4566/000000000000/sample-queue")
         var request    = new ReceiveMessageRequest(queueUrl.getQueueUrl())
                 .withWaitTimeSeconds(20)
                 .withMaxNumberOfMessages(10)
