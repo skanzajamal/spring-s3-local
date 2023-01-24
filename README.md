@@ -6,4 +6,30 @@
  # Prerequisites
 - Docker 
 - jdk 11
-- intellij or any ide
+- intelliJ or any IDE
+
+ # some useful commands
+ - create bucket
+ aws --endpoint-url=http://localhost:4566 s3 mb s3://mytestbucket
+ 
+  - list bucket
+ aws --endpoint-url=http://localhost:4566 s3 ls
+ 
+  - create queue
+ aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name test_queue
+ 
+  - list all bucket
+ aws --endpoint-url=http://localhost:4566 --region=eu-central-1 --no-sign-request --no-paginate sqs list-queues
+ 
+  - content of specific queue (received message)
+ aws --endpoint-url=http://localhost:4566 sqs receive-message --queue http://localhost:4566/000000000000/sample-queue
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
