@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566-4566"
+      - "8082-8082"
+    environment:
+      - SERVICES=s3
+      - HOSTNAME_EXTERNAL=localhost
+      - DEBUG=1
+      - PORT_WEB_UI=8082
+      - AWS_DEFSULT_REGION=eu-central-1
+    volumes:
+#      - '/private/tmp/localstack:/tmp/localstack'
+      - '/var/run/docker.sock:/var/run/docker.sock'
