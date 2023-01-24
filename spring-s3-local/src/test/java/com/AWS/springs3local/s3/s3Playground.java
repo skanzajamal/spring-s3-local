@@ -25,7 +25,7 @@ public class s3Playground {
 
     public final String REGION = "eu-central-1";
     public final String ENDPOINT_URL = "http://localhost:4566";
-    private static final String QUEUE_NAME = "testqueue";
+    private static final String QUEUE_NAME = "test_queue";
 
     private AmazonSQSAsync amazonSQSAsyncClient() {
         return AmazonSQSAsyncClientBuilder.standard()

@@ -12,6 +12,8 @@ services:
       - DEBUG=1
       - PORT_WEB_UI=8082
       - AWS_DEFSULT_REGION=eu-central-1
+      - AWS_ACCESS_KEY_ID=foo
+      - AWS_SECRET_ACCESS_KEY=bar
     volumes:
 #      - '/private/tmp/localstack:/tmp/localstack'
       - '/var/run/docker.sock:/var/run/docker.sock'
